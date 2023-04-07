@@ -13,7 +13,8 @@ const Shop = () => {
     const getPopularProducts=async()=>{
       try {
         const response = await Axios.get(
-          "https://e-commerce-backend-c4z0.onrender.com/api/products/popular"
+          "https://e-commerce-backend-c4z0.onrender.com/api/products/popular",
+          { mode: "cors" }
         );
         console.log(response.data)
         setFoodList(response.data)

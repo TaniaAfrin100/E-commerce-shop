@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import {
-
   FormContentRight,
   FormInputButton,
   FormInputLogin,
@@ -37,12 +36,11 @@ const FormSignup = () => {
       }
       else{
       const { data } = await axios.post(
-        "http://localhost:5001/api/auth/register",
+        "https://e-commerce-backend-c4z0.onrender.com/api/auth/register",
         {
           ...formData,
         },
         { withCredentials: true }
-        
       );
       if (data) {
         if (data.errors) {

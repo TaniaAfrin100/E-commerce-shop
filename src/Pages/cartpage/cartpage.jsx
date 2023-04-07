@@ -67,10 +67,13 @@ const CartPage = () => {
   useEffect(() => {
     const makeRequest = async () => {
       try {
-        const res = await Axios.post("http://localhost:5001/api/checkout/payment", {
-          tokenId: stripeToken.id,
-          amount: total,
-        });
+        const res = await Axios.post(
+          "https://e-commerce-backend-c4z0.onrender.com/api/checkout/payment",
+          {
+            tokenId: stripeToken.id,
+            amount: total,
+          }
+        );
         console.log(res.data)
         navigate('/',{
           stripeData: res.data,

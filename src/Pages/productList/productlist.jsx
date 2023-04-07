@@ -44,7 +44,9 @@ const Productlist = () => {
     setLoading(true)
     try {
       setActiveGenre('shirt')
-      const response=await Axios.get("http://localhost:5001/api/products/shirt")
+      const response = await Axios.get(
+        "https://e-commerce-backend-c4z0.onrender.com/api/products/shirt"
+      );
       setLoading(false)
       setProductList(response.data)
       
@@ -59,7 +61,9 @@ const Productlist = () => {
     setLoading(true)
     try {
       setActiveGenre('tshirt')
-      const response=await Axios.get("http://localhost:5001/api/products/tshirt")
+      const response = await Axios.get(
+        "https://e-commerce-backend-c4z0.onrender.com/api/products/tshirt"
+      );
       setLoading(false)
       setProductList(response.data)
       
@@ -74,7 +78,9 @@ const Productlist = () => {
     setLoading(true)
     try {
       setActiveGenre('jeans')
-      const response=await Axios.get("http://localhost:5001/api/products/jeans")
+      const response = await Axios.get(
+        "https://e-commerce-backend-c4z0.onrender.com/api/products/jeans"
+      );
       setLoading(false)
       setProductList(response.data)
       
