@@ -82,10 +82,16 @@ export const Filter=styled.button`
 
 
 `
-export const ProductItems=styled(motion.div)`
-display:flex ;
-align-items:center ;
-justify-content:space-evenly ;
-flex-wrap:wrap ;
-margin:3rem 10rem;
-`
+export const ProductItems = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 3rem 10rem;
+  @media only screen and (max-width: ${Variable.mobile_width}) {
+    margin: 0rem;
+  }
+  @media only screen and (max-width: ${Variable.tablet_width}) {
+    margin: 0rem;
+  }
+`;
