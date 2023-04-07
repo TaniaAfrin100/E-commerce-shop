@@ -27,7 +27,9 @@ const Productlist = () => {
       setActiveGenre('')
       
       setActiveGenre('')
-      const response=await Axios.get("http://localhost:5001/api/products")
+      const response = await Axios.get(
+        "https://e-commerce-backend-c4z0.onrender.com/api/products"
+      );
       
       setLoading(false)
       setProductList(response.data)

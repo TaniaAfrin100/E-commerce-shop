@@ -9,7 +9,7 @@ import { useShop } from '../../ContextApi/useShop';
 // import product from '../../product.json';
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { AddContainer, Amount, AmountContainer, Button, Desc, Image, ImgContainer, InfoContainer, Price, Title, Wrapper,Category } from './productpage.styled';
+import { AddContainer, Amount, AmountContainer, Button, Category, Desc, Image, ImgContainer, InfoContainer, Price, Title, Wrapper } from './productpage.styled';
 
 const imgVariant = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
@@ -33,7 +33,9 @@ const Productpage = () => {
   useEffect(() => {
     const getProducts=async()=>{
       try {
-        const response=await Axios.get(`http://localhost:5001/api/products/${id}`)
+        const response = await Axios.get(
+          `https://e-commerce-backend-c4z0.onrender.com/api/products/${id}`
+        );
         console.log(response);
         setItem(response.data)
         console.log(item)

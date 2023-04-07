@@ -12,7 +12,9 @@ const Shop = () => {
   useEffect(()=>{
     const getPopularProducts=async()=>{
       try {
-        const response=await Axios.get("http://localhost:5001/api/products/popular")
+        const response = await Axios.get(
+          "https://e-commerce-backend-c4z0.onrender.com/api/products/popular"
+        );
         // console.log(response.data)
         setFoodList(response.data)
       } catch (error) {
