@@ -64,10 +64,7 @@ useEffect(() => {
 
 
 const handleClick=()=>{
-  if(!token.jwt){
-    navigate('/login')
-  }
-  else{
+ 
     const product = { title,img,desc, price,_id,catagories,quantity};
 
   if (isInCart) {
@@ -75,7 +72,7 @@ const handleClick=()=>{
   } else {
     addToCart(product);
   }
-  }
+  
   
 }
 const control = useAnimation();
