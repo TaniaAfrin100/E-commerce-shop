@@ -40,7 +40,7 @@ export const Brandname=styled(Link)`
       }
 `
 export const Nav=styled.nav`
-
+z-index:99
 
 
 `
@@ -169,7 +169,7 @@ export const StyledMenuButton=styled.div`
     
     z-index:999 ;
     position:absolute ;
-    top: 3.5rem;
+    top: 2rem;
     right: 1rem;
     height: 40px;
     width: 40px;

@@ -31,7 +31,7 @@ export const PersonalInfo=styled.div`
 margin-right:8rem ;
 @media only screen and (max-width: ${Variable.mobile_width}){
         
-        margin-right:2rem ;
+        margin-right:0rem ;
     }
 
 
