@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { Link, useNavigate } from 'react-router-dom';
 import { Profile } from '../../Components/profile/Profile';
 import { Container } from '../../Themes/globalComponents.styled';
-import { Brandname, CloseButton, MenuButton, Nav, Navbars, NavButton, NavCart, NavItems, NavList, Navlogo, Navright, StyledMenuButton } from './navbar.styled';
+import { Brandname, CloseButton, MenuButton, Nav, NavButton, NavCart, NavItems, NavList, Navbars, Navlogo, Navright, StyledMenuButton } from './navbar.styled';
 
 
 const navbarVariant = {
@@ -118,7 +118,7 @@ const Sidebar = () => {
         
         
         
-        <NavCart onClick={()=>cookies.jwt?navigate('/cart'):navigate('/login')}/>
+        <NavCart onClick={()=>navigate('/cart')}/>
         
         
         
