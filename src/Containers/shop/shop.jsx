@@ -15,7 +15,7 @@ const Shop = () => {
         const response = await Axios.get(
           "https://e-commerce-backend-c4z0.onrender.com/api/products/popular"
         );
-        // console.log(response.data)
+        console.log(response.data)
         setFoodList(response.data)
       } catch (error) {
         console.log(error);
