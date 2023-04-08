@@ -2,6 +2,7 @@ import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
+import { useNavigate } from "react-router-dom";
 import image2 from "../../assets/home.jpg";
 import { Container } from "../../Themes/globalComponents.styled";
 import {
@@ -23,6 +24,7 @@ const extraInfoVariant = {
 const Home = () => {
   const control = useAnimation();
   const [ref, inView] = useInView();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (inView) {
@@ -46,10 +48,12 @@ const Home = () => {
             you want
             <br />
             faster and easier
-            <br/>
+            <br />
             with our fashion
           </Heading>
-          <StyledHomeButton>Shop Now</StyledHomeButton>
+          <StyledHomeButton onClick={() => navigate("/products")}>
+            Shop Now
+          </StyledHomeButton>
         </Headline>
 
         <ExtraInfo
@@ -58,8 +62,7 @@ const Home = () => {
           initial="hidden"
           animate={control}
         >
-          
-      <Image4 src={image2} alt="" />
+          <Image4 src={image2} alt="" />
         </ExtraInfo>
       </Containers>
     </Container>
